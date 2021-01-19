@@ -1,0 +1,26 @@
+{
+  "name": "ledger-nanox-multi-signature-test",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn clean && yarn compile",
+    "clean": "del dist",
+    "compile": "./node_modules/typescript/bin/tsc",
+    "start": "yarn build && node dist/index.js"
+  },
+  "dependencies": {
+    "@arkecosystem/client": "^1.1.4",
+    "@arkecosystem/crypto": "3.0.0-next.6",
+    "@arkecosystem/ledger-transport": "^1.1.3",
+    "@ledgerhq/hw-transport": "^5.26.0",
+    "@ledgerhq/hw-transport-node-hid": "^5.26.0"
+  },
+  "devDependencies": {
+    "@types/ledgerhq__hw-transport": "^4.21.3",
+    "@types/ledgerhq__hw-transport-node-hid": "^4.22.2",
+    "@types/node": "^14.14.5",
+    "del-cli": "^3.0.1",
+    "typescript": "^4.0.5"
+  }
+}
